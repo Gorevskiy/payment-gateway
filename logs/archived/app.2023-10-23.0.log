@@ -1,0 +1,4 @@
+2023-10-23 14:20:33,159 INFO c.s.StoreTestApplication [main] Starting StoreTestApplication v1 using Java 20.0.2 with PID 6248 (E:\playtox\store-test\target\store-test-1.jar started by Den in E:\playtox\store-test)
+2023-10-23 14:20:33,163 DEBUG c.s.StoreTestApplication [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-23 14:20:33,163 INFO c.s.StoreTestApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-23 14:20:46,309 INFO c.s.StoreTestApplication [main] Started StoreTestApplication in 13.534 seconds (process running for 15.183)

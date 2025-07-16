@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Администратор платежей</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css(rnd=${rnd})}" />
+    <script th:src="@{/js/jquery.js}" type="text/javascript"></script>
+    <script th:src="@{/js/myscripts.js(rnd=${rnd})}" type="text/javascript"></script>
+</head>
+<body>
+    <div id='alertMsg' class='modalAlert'><div id='contentAlert' class='modal_content_alert'></div></div>
+    <div id='modalF' class='modal'><div id='contentF' class='modal_content'></div></div>
+    <div id='modalLists' class='modal'><div id='contentLists' class='modal_content2'></div></div>
+    <div id='modalSeek' class='modal'><div id='contentSeek' class='modal_content2'></div></div>
+    <div id='modalDwnld' class='modal'><div id='contentDwnld' class='modal_content3'></div></div>
+    <div id='modalListsE' class='modal'><div id='contentListsE' class='modal_content2'></div></div>
+    <table class="global">
+	<tr>
+    <td class="global-td1" id="status_line">
+		  <div  th:if="${adm_user} != 'not'"> 
+			<div class="stat-line-l regr2">
+				<table border="0" cellspacing="10">
+				  <tr>
+					  <div th:if="${razdel} == 'invoices-list'">
+						<td>
+							<div class="razdely_u">
+							   <a th:href="@{/admin-main/vagper-lists}" target="_self" class="lnk4_u">Переписные листы</a>
+							</div>
+						</td>
+					    <td>
+							<div class="razdely">
+								<a th:href="@{/admin-main/vagper-users}" target="_self" class="lnk4">Пользователи</a>
+							</div>
+						</td>
+					  </div>
+					  <div th:if="${razdel} == 'vagper-users'">
+						<td>
+							<div class="razdely">
+								<a th:href="@{/admin-main/vagper-lists}" target="_self" class="lnk4">Переписные листы</a>
+							</div>
+						</td>
+					    <td>
+							<div class="razdely_u">
+								<a th:href="@{/admin-main/vagper-users}" target="_self" class="lnk4_u">Пользователи</a>
+							</div>
+						</td>
+					  </div>
+					  <td style="padding-left:60px;">
+						  <a href="javascript:{}" th:onclick="showSeekF()" target="_self"><img th:src="@{/img/seek.jpg}" width="35" border="0"></a>
+					  </td>
+                      <td style="padding-left:40px;">
+						  <img th:src="@{/img/user.jpg}" width="20" border="0">&nbsp;
+						  <span class="spn1">[[${adm_user}]]</span>
+						  <a class="lnk22" th:href="@{/adm-logout}">выход</a>
+					  </td>
+					  <td style="padding-left:60px;">
+						 <a th:href="@{/pdf/instr.pdf}" target="_blank" class="lnk_pdf">инструкция пользователя</a>
+					  </td>
+				  </tr>
+				</table>
+			</div>
+		  </div>
+		  <div th:unless="${adm_user} != 'not'">
+			<a class="lnk2" href="javascript:void(0)" onclick="openModalLA()">войти</a>&nbsp;&nbsp;
+		  </div>
+	</td>
+	</tr><tr>
+	<td class="global-td2">
+	  <div th:if="${adm_user} != 'not'">
+          <table border="0" cellspacing="15" cellpadding="10" style="border-top-width:1px;border-top-color:#333333;border-top-style:solid;">
+             <tr>
+                <td style="padding-top:50px;border-right-width:2px;border-right-color:#c4c4c4;border-right-style:solid;vertical-align:top;width:350px;">
+				   <div style="padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;border-radius:15px;background:#efefef;">
+					   <p><a class="lnk2" href="javascript:{}" th:onclick="showInsertListF()" target="_self">Новый список</a></p>
+					   <p><a class="lnk2" th:href="@{/gvc-txt}" target="_blank">Сформировать GVC.TXT</a></p>
+					   <p><a class="lnk2" th:href="@{/svod-itg-vags}" target="_blank">Пономерной учет в EXCEL</a></p>
+					   <p><a class="lnk2" th:href="@{/svod-itg}" target="_blank">Сводные итоги в EXCEL</a></p>
+					   <p><a class="lnk2" th:href="@{/srav-ppv}" target="_blank">Сравнение данных по переписи и наличия в EXCEL</a></p>
+				   </div>	   
+                   <div th:if="${adm_role} == 'adm-super'" class="menu-links1">
+					   <p><a class="lnk2" href="javascript:{}" th:onclick="showMoveToArh()" target="_self">Перенести БД в архив</a></p>
+					   <p><a class="lnk2" href="javascript:{}" th:onclick="showArhivInfo()" target="_self">Данные из архива</a></p>
+                   </div>				   
+				   <div class="menu-links1">
+                       Редактирование переписных листов<br/>станционными пользователями:<br/>
+                        <div th:if="${users_upd} == 'yes'">
+						<span>
+						   <input type="radio" id="user_upd" name="user_upd" value="yes" onclick="userUpd('yes')" checked />
+						   <label for="huey">Вкл</label>
+						</span>
+						<span style="padding-left:20px;">
+						   <input type="radio" id="user_upd" name="user_upd" value="no" onclick="userUpd('no')" />
+						   <label for="huey">Откл</label>
+						</span>
+						</div>
+                        <div th:if="${users_upd} == 'no'">
+						<span>
+						   <input type="radio" id="user_upd" name="user_upd" value="yes" onclick="userUpd('yes')"/>
+						   <label for="huey">Вкл</label>
+						</span>
+						<span style="padding-left:20px;">
+						   <input type="radio" id="user_upd" name="user_upd" value="no" onclick="userUpd('no')" checked />
+						   <label for="huey">Откл</label>
+						</span>
+						</div>
+				   </div>
+                </td>
+                <td style="padding-top:15px;padding-left:50px;vertical-align:top;">
+                  <!--******************************************* -->
+				  <div th:if="${razdel} == 'invoices-list'">
+					   <div th:if="${listV2.size() > 0}">
+						  <table class="tbl_catalog" cellspacing="0">
+							  <tr>
+								 <th class="th_catalog">станция</th>
+								 <th class="th_catalog">списков</th>
+								 <th>&nbsp;</th>
+							  </tr>
+							  <tr th:each="lists : ${listV2}">
+								<td style="padding-left:15px;" class="td_catalog2">
+								   <a href="javascript:{}" id="delList" th:onclick="showStanInfo([[${lists.stan}]])" target="_self" class="lnk5">[[${lists.getStanCapt()}]]</a>
+								</td>
+								<td class="td_catalog21" th:text="${lists.getCntLists()}" />
+								<td style="padding-left:15px;">&nbsp;</td>
+							  </tr>
+						  </table>
+					   </div>
+					   <div th:unless="${listV2.size() > 0}">
+						  <span>Список invoice пуст...</span>
+					   </div>
+				  </div>
+                  <!--******************************************* -->
+                </td>
+                <td style="padding:20px;vertical-align:top;">			 
+				 <div th:if="${razdel} == 'invoices-list'">
+                    <a th:href="@{/admin-main/vagper-lists}" target="_self" class="lnk23">
+					  <span><img th:src="@{/img/refresh.jpg}" width="20" border="0">Обновить</span>
+					</a>
+				 </div>
+               </td>
+		     </tr>
+		  </table>
+	  </div>
+	  <div th:unless="${adm_user} != 'not'">
+         <h1>Авторизация не выполнена!</h1>
+	  </div>
+	</td>
+	</tr>
+	</table>
+</body>
+</html>

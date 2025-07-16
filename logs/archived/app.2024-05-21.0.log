@@ -1,0 +1,24 @@
+2024-05-21 07:21:29,222 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 10640 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 07:21:29,223 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 07:21:29,223 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 07:21:35,551 c.v.VagperApplication Started VagperApplication in 6.779 seconds (process running for 7.836)
+2024-05-21 07:24:16,662 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 9512 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 07:24:16,662 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 07:24:16,662 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 07:24:20,721 c.v.VagperApplication Started VagperApplication in 4.384 seconds (process running for 4.998)
+2024-05-21 07:26:24,267 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 3380 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 07:26:24,267 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 07:26:24,267 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 07:26:28,196 c.v.VagperApplication Started VagperApplication in 4.257 seconds (process running for 4.844)
+2024-05-21 11:43:45,814 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 3380 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 11:43:45,814 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 11:43:45,829 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 11:43:54,139 c.v.VagperApplication Started VagperApplication in 8.755 seconds (process running for 9.927)
+2024-05-21 11:46:37,632 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 7016 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 11:46:37,637 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 11:46:37,637 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 11:46:44,207 c.v.VagperApplication Started VagperApplication in 6.903 seconds (process running for 7.539)
+2024-05-21 11:49:32,259 c.v.VagperApplication Starting VagperApplication v1 using Java 20.0.2 with PID 5172 (E:\vagper\target\vagper-1.jar started by Den in E:\vagper)
+2024-05-21 11:49:32,259 c.v.VagperApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2024-05-21 11:49:32,259 c.v.VagperApplication No active profile set, falling back to 1 default profile: "default"
+2024-05-21 11:49:38,871 c.v.VagperApplication Started VagperApplication in 6.929 seconds (process running for 7.497)
