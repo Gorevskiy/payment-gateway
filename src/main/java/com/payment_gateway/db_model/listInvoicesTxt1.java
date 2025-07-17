@@ -13,6 +13,7 @@ public class listInvoicesTxt1 {
     private String status_id;
     private String created_at;
     private String updated_at;
+    private String count_goods;
     //********************************
     public void setInvoiceId( String invoice_id ) { this.invoice_id = invoice_id; }
     public String getInvoiceId() { return invoice_id; }
@@ -49,5 +50,8 @@ public class listInvoicesTxt1 {
     //-----------------------------
     public void setUpdatedAt( String updated_at ) { this.updated_at = updated_at; }
     public String getUpdatedAt() { return updated_at; }
+    //-----------------------------
+    public void setCountGoods( String count_goods ) { this.count_goods = count_goods; }
+    public String getCountGoods() { return count_goods; }
     //********************************
 }  

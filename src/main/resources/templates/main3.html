@@ -64,13 +64,14 @@
 					   <div th:if="${listInvTxt.size() > 0}">
 						  <table class="tbl_catalog" cellspacing="0">
 							  <tr>
-								 <th class="th_catalog">Наименование</th>
+								 <th class="th_catalog">Наименование инвойса</th>
 								 <th class="th_catalog">Контакты</th>
 								 <th class="th_catalog">Сервис</th>
 								 <th class="th_catalog">Сумма</th>
 								 <th class="th_catalog">link для оплаты</th>
 								 <th class="th_catalog">Срок действия</th>
 								 <th class="th_catalog">Статус</th>
+								 <th class="th_catalog">Товары</th>
 								 <th class="th_catalog">Дата создания</th>
 								 <th class="th_catalog">Последнее изменение</th>
 								 <th>&nbsp;</th>
@@ -83,6 +84,7 @@
 								 <td class="td_catalog21" th:text="${lists.getLinkForPayment()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getValidityPeriod()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getStatusId()}" />
+								 <td class="td_catalog21_center" th:text="${lists.getCountGoods()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getCreatedAt()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getUpdatedAt()}" />
 								 <td style="padding-inline-start:15px;">&nbsp;</td>

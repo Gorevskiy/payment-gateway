@@ -25,4 +25,7 @@ public interface goodsRepository extends JpaRepository<goods, String>{
     @Query("SELECT g FROM goods g ORDER BY g.created_at,g.updated_at")     
     ArrayList<goods> findAllGoodsForTxt();
 	//----------------------------------
+    @Query("SELECT count(g.goods_id) FROM goods g WHERE g.invoice_id=:invoice_id")     
+    Integer getCountGoodsInInvoice( String invoice_id );
+	//----------------------------------
 }

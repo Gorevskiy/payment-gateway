@@ -10,6 +10,7 @@ import com.payment_gateway.repository.goodsRepository;
 import com.payment_gateway.repository.goodsTaxRepository;
 import com.payment_gateway.repository.invoiceStatusRepository;*/
 import com.payment_gateway.repository.invoicesRepository;
+import com.payment_gateway.repository.goodsRepository;
 
 import com.payment_gateway.methods.mymethods;
 
@@ -46,6 +47,9 @@ public class payment_gatewayController {
   @Autowired
   private invoicesRepository InvoicesRepository;
 
+  @Autowired
+  private goodsRepository GoodsRepository;
+
   //@Autowired
   //private invoiceStatusRepository InvoiceStatusRepository;
 
@@ -77,7 +81,7 @@ public class payment_gatewayController {
         String message = "";
         List<listInvoicesTxt1> listInvTxt =  new ArrayList<listInvoicesTxt1>();  
         int a = (int) ( Math.random() * 1000 );
-        listInvTxt = mymethods.getListInv(InvoicesRepository);
+        listInvTxt = mymethods.getListInv(InvoicesRepository, GoodsRepository);
         model.addAttribute("listInvTxt", listInvTxt);
         model.addAttribute("rnd", Integer.toString(a));
         model.addAttribute("message", message);

@@ -12,12 +12,13 @@ import org.slf4j.LoggerFactory;
 
 import com.payment_gateway.db_model.*;
 import com.payment_gateway.repository.invoicesRepository;
+import com.payment_gateway.repository.goodsRepository;
 
 public class mymethods {
 
    private static final Logger logger = LoggerFactory.getLogger(mymethods.class);
    //****************
-   public static List<listInvoicesTxt1> getListInv(invoicesRepository InvoicesRepository) throws ClassNotFoundException,IOException {
+   public static List<listInvoicesTxt1> getListInv(invoicesRepository InvoicesRepository, goodsRepository GoodsRepository) throws ClassNotFoundException,IOException {
 	  //------------------------------------------------------ 
       List<listInvoicesTxt1> lv = new ArrayList<listInvoicesTxt1>();
       listInvoicesTxt1 listV1;
@@ -47,6 +48,7 @@ public class mymethods {
          listV1.setStatusId(Integer.toString(vList.getStatusId()));
          listV1.setCreatedAt(vList.getCreatedAt());
          listV1.setUpdatedAt(vList.getUpdatedAt());
+         listV1.setCountGoods( Integer.toString(GoodsRepository.getCountGoodsInInvoice(vList.getInvoiceId())) );
 		 lv.add(listV1);
 		 //------------------------------ 
 	  }
