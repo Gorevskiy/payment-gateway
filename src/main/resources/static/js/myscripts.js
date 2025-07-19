@@ -54,8 +54,7 @@ function addNewInvoiceF(){
 }
 /****************************************************/
 function submitAddNewInvoiceF(){
-
-    var newInvoice = [];
+   var newInvoice = [];
 	newInvoice[0] = document.getElementById('fullName').value;
 	newInvoice[1] = document.getElementById('phoneNumber').value;
 	newInvoice[2] = document.getElementById('email').value;
@@ -80,6 +79,103 @@ function submitAddNewInvoiceF(){
    });
 }
 /****************************************************/
+function addNewGoodF(invoiceId){
+   var mod_cont = document.getElementById("contentForm");
+   mod_cont.style.width = "400px";
+   var modal = document.getElementById("modalForm");
+   var textAlert = "<span class='close_modal_window' onclick='closeModalForm()'>×</span>";
+   textAlert = textAlert + "<table align='center' cellpadding='0' cellspacing='0' class='tbl_form'>";
+   textAlert = textAlert + "<tr><td colspan='2' class='day_td33'>Добавить новый товар</td></tr>";
+//   textAlert = textAlert + "<tr><td colspan='2' class='day_td33'>Инвойс: " + invoiceId +  "</td></tr>";
+   textAlert = textAlert + "<tr><td colspan='2' class='day_td33'>Инвойс: " + getInvoiceName(invoiceId) +  "</td></tr>";
+   textAlert = textAlert + "<tr>";
+   textAlert = textAlert + "<td class='day_td3f'>Наименование товара</td>";
+   textAlert = textAlert + "<td class='day_td22'>";
+   textAlert = textAlert + "<input type=\"text\" id=\"goodsName\" name=\"goodsName\" value=\"\" style=\"inline-size:120px;\">";
+   textAlert = textAlert + "</td>";
+   textAlert = textAlert + "</tr><tr>";
+   textAlert = textAlert + "<td class='day_td3f'>Артикул</td>";
+   textAlert = textAlert + "<td class='day_td22'>";
+   textAlert = textAlert + "<input type=\"text\" id=\"articleNumber\" name=\"articleNumber\" value=\"\" style=\"inline-size:100px;\">";
+   textAlert = textAlert + "</td>";
+   textAlert = textAlert + "</tr><tr>";
+   textAlert = textAlert + "<td class='day_td3f'>Цена</td>";
+   textAlert = textAlert + "<td class='day_td22'>";
+   textAlert = textAlert + "<input type=\"text\" id=\"price\" name=\"price\" value=\"\" style=\"inline-size:70px;\">";
+   textAlert = textAlert + "</td>";
+   textAlert = textAlert + "</tr><tr>";
+   textAlert = textAlert + "<td class='day_td3f'>Количество</td>";
+   textAlert = textAlert + "<td class='day_td22'>";
+   textAlert = textAlert + "<input type=\"text\" id=\"count\" name=\"count\" value=\"\" style=\"inline-size:50px;\">";
+   textAlert = textAlert + "</td>";
+   textAlert = textAlert + "</tr><tr>";
+   textAlert = textAlert + "<td colspan=\"2\" style=\"padding-block-start:20px;\">";
+   textAlert = textAlert + "<span class=\"sbmt\" onclick=\"submitAddNewGoodF('" + invoiceId + "')\">Сохранить</span>&nbsp;&nbsp;";
+   textAlert = textAlert + "<span class=\"sbmt\" onclick=\"closeModalForm()\">Отмена</span>";
+   textAlert = textAlert + "</td>";
+   textAlert = textAlert + "</tr>";
+   textAlert = textAlert + "</table>";
+   mod_cont.innerHTML = textAlert;
+   modal.style.display = "block";
+}
+/****************************************************/
+function getInvoiceName(invoiceId){
+   //---------------------------------------
+   var urlA = new URL(urlAjax + "get_invoice_name");  	   
+   var ret = "";
+   //---------------------------------------
+	$.ajax({
+	  url: urlA,
+	  type: 'post',
+	  data: { invoice_id:invoiceId },
+	  dataType: 'json',
+     async: false,
+	  success:function(response){
+		 if ( response["status"] === "ok" ){ 
+			ret = response["invoice_name"];
+		 }
+	  },
+	  error:function(){ 
+		showAlert( "Ошибка запроса имени инвойса!", "" );
+	  }
+	});
+   return ret;
+}
+/****************************************************/
+function submitAddNewGoodF(invoiceId){
+   var newGood = [];
+	newGood[0] = document.getElementById('goodsName').value;
+	newGood[1] = document.getElementById('articleNumber').value;
+	newGood[2] = document.getElementById('price').value;
+	newGood[3] = document.getElementById('count').value;
+   newGood[4] = invoiceId;
+   //---------------------------------------
+   var urlA = new URL(urlAjax + "save-new-good");  	   
+   var urlRedir = new URL(urlAjax + "main");  	   
+   //---------------------------------------
+   $.ajax({
+	 url: urlA,
+	 type: 'post',
+	 data: { new_good:newGood },
+	 dataType: 'json',
+	 success:function(response){
+		//alert( JSON.stringify(response) );
+        closeModalForm();
+		//alert( response["status"] );
+        window.location.replace(urlRedir);		
+	 }
+   });
+}
+/****************************************************/
+
+
+
+
+
+
+
+
+
 function closeModalForm(){
    var mod_cont = document.getElementById("contentForm");
    var modal = document.getElementById("modalForm");
@@ -87,9 +183,6 @@ function closeModalForm(){
    modal.style.display = "none";
 }
 /****************************************************/
-
-
-
 
 
 

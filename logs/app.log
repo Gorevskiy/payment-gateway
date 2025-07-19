@@ -1,102 +1,10 @@
-2025-07-17 11:08:00,566 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 57839 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 11:08:00,569 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 11:08:00,572 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 11:08:15,407 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 15.78 seconds (process running for 17.4)
-2025-07-17 12:03:44,207 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 82974 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:03:44,233 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:03:44,240 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:04:04,311 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 23.846 seconds (process running for 26.613)
-2025-07-17 12:04:07,184 c.p.m.mymethods выгружен список invoices
+2025-07-18 17:05:07,303 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 228934 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
+2025-07-18 17:05:07,327 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
+2025-07-18 17:05:07,334 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
+2025-07-18 17:05:29,464 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 23.79 seconds (process running for 25.916)
+2025-07-18 17:05:40,762 c.p.m.mymethods выгружен список invoices
 
-2025-07-17 12:07:32,665 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 84696 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:07:32,673 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:07:32,682 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:07:45,849 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 14.571 seconds (process running for 17.036)
-2025-07-17 12:08:05,657 c.p.m.mymethods выгружен список invoices
+2025-07-18 17:07:02,908 c.p.m.ajaxDisp добавлен новый товар fish    invoice_id:  d7300991-28f7-4b6d-9b9a-9aa0d356adeb
 
-2025-07-17 12:38:24,191 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 98789 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:38:24,197 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:38:24,200 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:38:42,792 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 19.944 seconds (process running for 21.993)
-2025-07-17 12:38:44,675 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:40:02,336 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:40:36,961 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 99982 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:40:36,966 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:40:36,968 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:40:51,818 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 15.98 seconds (process running for 18.286)
-2025-07-17 12:40:52,945 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:42:38,035 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 101032 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:42:38,040 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:42:38,045 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:42:53,352 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 16.407 seconds (process running for 18.449)
-2025-07-17 12:43:26,729 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:47:13,282 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 103248 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:47:13,287 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:47:13,289 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:47:26,027 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 13.904 seconds (process running for 15.954)
-2025-07-17 12:47:30,635 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:49:30,514 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 104375 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:49:30,518 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:49:30,520 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:49:45,267 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 15.979 seconds (process running for 18.05)
-2025-07-17 12:50:06,633 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:51:13,556 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 105294 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:51:13,565 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:51:13,568 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:51:29,191 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 16.873 seconds (process running for 19.244)
-2025-07-17 12:51:31,775 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:53:45,003 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 106570 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:53:45,007 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:53:45,009 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:54:04,243 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 20.315 seconds (process running for 22.188)
-2025-07-17 12:54:05,815 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 12:57:22,799 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 108345 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 12:57:22,805 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 12:57:22,810 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 12:57:41,031 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 19.38 seconds (process running for 21.777)
-2025-07-17 12:57:43,690 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 13:00:00,835 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 109710 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 13:00:00,844 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 13:00:00,845 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 13:00:13,604 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 13.89 seconds (process running for 15.647)
-2025-07-17 13:00:24,083 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 17:10:48,082 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 223030 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 17:10:48,090 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 17:10:48,093 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 17:11:03,589 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 16.712 seconds (process running for 18.78)
-2025-07-17 17:11:05,075 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 17:12:33,676 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 223988 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 17:12:33,681 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 17:12:33,684 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 17:12:43,905 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 11.23 seconds (process running for 12.834)
-2025-07-17 17:12:48,471 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 17:14:43,744 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 225084 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 17:14:43,748 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 17:14:43,750 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 17:14:58,366 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 15.618 seconds (process running for 17.334)
-2025-07-17 17:15:00,112 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 17:17:00,246 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 226271 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 17:17:00,261 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 17:17:00,264 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 17:17:11,044 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 11.789 seconds (process running for 13.426)
-2025-07-17 17:17:29,607 c.p.m.mymethods выгружен список invoices
-
-2025-07-17 17:18:24,030 c.p.Payment_gatewayApplication Starting Payment_gatewayApplication v1.1 using Java 17.0.15 with PID 227034 (/home/den/payment-gateway/target/payment_gateway-1.1.jar started by root in /home/den/payment-gateway)
-2025-07-17 17:18:24,080 c.p.Payment_gatewayApplication Running with Spring Boot v3.1.4, Spring v6.0.12
-2025-07-17 17:18:24,082 c.p.Payment_gatewayApplication No active profile set, falling back to 1 default profile: "default"
-2025-07-17 17:18:36,218 c.p.Payment_gatewayApplication Started Payment_gatewayApplication in 13.1 seconds (process running for 14.758)
-2025-07-17 17:18:38,479 c.p.m.mymethods выгружен список invoices
+2025-07-18 17:07:03,190 c.p.m.mymethods выгружен список invoices
 

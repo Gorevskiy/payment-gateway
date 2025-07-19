@@ -26,6 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.payment_gateway.db_model.*;
+import com.payment_gateway.repository.goodsRepository;
 import com.payment_gateway.repository.invoicesRepository;
 
 public class ajaxDisp {
@@ -66,4 +67,47 @@ public class ajaxDisp {
 	  out.flush();
    }
    //************************************************************
+   public static void getInvoiceName( String invoiceId, invoicesRepository InvoicesRepository, HttpServletResponse response ) throws ClassNotFoundException,SQLException,IOException,JSONException {
+	  JSONObject jsonTmp = new JSONObject();
+	  response.setContentType("application/json");
+	  response.setCharacterEncoding("UTF-8");
+	  PrintWriter out = response.getWriter();
+	  jsonTmp.put("status", "ok" );
+	  jsonTmp.put("invoice_name", InvoicesRepository.getInvoiceName(invoiceId) );
+	  out.print(jsonTmp);
+	  out.flush();
+   }
+   //************************************************************
+   public static void saveGoodNew( List<String> newGood, goodsRepository GoodsRepository, HttpServletResponse response ) throws ClassNotFoundException,SQLException,IOException,JSONException {
+
+	  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+      Calendar cal = new GregorianCalendar();	
+  	  String datToday = dateFormat.format(cal.getTime());
+
+	  UUID randomUuid = UUID.randomUUID();
+
+	  goods Good = new goods();
+      Good.setGoodsId(randomUuid.toString());	  
+      Good.setInvoiceId(newGood.get(4));	  
+      Good.setGoodsName(newGood.get(0));	  
+      Good.setArticleNumber(newGood.get(1));	  
+      Good.setPrice( Float.parseFloat(newGood.get(2)) );	  
+      Good.setCount( Integer.parseInt(newGood.get(3)) );	  
+      Good.setGoodsOperationTypeId(0);
+      Good.setGoodsPaymentId(0);
+      Good.setCreatedAt(datToday);	  
+      Good.setUpdatedAt(datToday);	  
+
+	  GoodsRepository.addGoods(Good);
+
+	  logger.info("добавлен новый товар " + newGood.get(0) + "    invoice_id:  " + newGood.get(4) + "\n" );
+
+	  JSONObject jsonTmp = new JSONObject();
+	  response.setContentType("application/json");
+	  response.setCharacterEncoding("UTF-8");
+	  PrintWriter out = response.getWriter();
+	  jsonTmp.put("status", "ok" );
+	  out.print(jsonTmp);
+	  out.flush();
+   }
 }

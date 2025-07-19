@@ -28,5 +28,7 @@ public interface invoicesRepository extends JpaRepository<invoices, String>{
     @Query("SELECT count(i.invoice_id) FROM invoices i")     
     Integer cntAllInvoices();
 	//----------------------------------
+    @Query("SELECT i.full_name FROM invoices i WHERE i.invoice_id=:invoice_id")     
+    String getInvoiceName( String invoice_id );
 
 }

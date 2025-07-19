@@ -21,7 +21,7 @@ public class goods {
     private int goods_tax_id;
 
     @Column
-    private int price;
+    private float price;
 
     @Column
     private int count;
@@ -53,17 +53,17 @@ public class goods {
     public void setGoodsTaxId( int goods_tax_id ) { this.goods_tax_id = goods_tax_id; }
     public int getGoodsTaxId() { return goods_tax_id; }
     //-----------------------------
-    public void setPrice( int price ) { this.price = price; }
-    public int getPrice() { return price; }
+    public void setPrice( float price ) { this.price = price; }
+    public float getPrice() { return price; }
     //-----------------------------
     public void setCount( int count ) { this.count = count; }
     public int getCount() { return count; }
     //-----------------------------
-    public void setGoodsOperationGoodsId( int goods_operation_type_id ) { this.goods_operation_type_id = goods_operation_type_id; }
-    public int getGoodsOperationGoodsId() { return goods_operation_type_id; }
+    public void setGoodsOperationTypeId( int goods_operation_type_id ) { this.goods_operation_type_id = goods_operation_type_id; }
+    public int getGoodsOperationTypeId() { return goods_operation_type_id; }
     //-----------------------------
-    public void setGoodsPaimentId( int goods_payment_id ) { this.goods_payment_id = goods_payment_id; }
-    public int getGoodsPaimentId() { return goods_payment_id; }
+    public void setGoodsPaymentId( int goods_payment_id ) { this.goods_payment_id = goods_payment_id; }
+    public int getGoodsPaymentId() { return goods_payment_id; }
     //-----------------------------
     public void setCreatedAt( String created_at ) { this.created_at = created_at; }
     public String getCreatedAt() { return created_at; }

@@ -23,13 +23,11 @@
 			<div class="stat-line-l regr2">
 				<table border="0" cellspacing="10">
 				  <tr>
-					  <div th:if="${razdel} == 'invoices-list'">
 						<td>
 							<div class="razdely_u">
 							   <a th:href="@{/main}" target="_self" class="lnk4_u">Invoices</a>
 							</div>
 						</td>
-					  </div>
 					  <td style="padding-inline-start:60px;">
 						  <a href="javascript:{}" th:onclick="showSeekF()" target="_self"><img th:src="@{/img/seek.jpg}" width="35" border="0"></a>
 					  </td>
@@ -84,7 +82,9 @@
 								 <td class="td_catalog21" th:text="${lists.getLinkForPayment()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getValidityPeriod()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getStatusId()}" />
-								 <td class="td_catalog21_center" th:text="${lists.getCountGoods()}" />
+								 <td class="td_catalog21_center">
+									<a class="lnk2" href="javascript:void(0)" th:data-p1="${lists.getInvoiceId()}" th:onclick="|addNewGoodF(this.getAttribute('data-p1'))|">[[${lists.getCountGoods()}]]</a>
+								</td>
 								 <td class="td_catalog21_center" th:text="${lists.getCreatedAt()}" />
 								 <td class="td_catalog21_center" th:text="${lists.getUpdatedAt()}" />
 								 <td style="padding-inline-start:15px;">&nbsp;</td>

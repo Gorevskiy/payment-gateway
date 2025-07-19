@@ -23,19 +23,8 @@ public class mymethods {
       List<listInvoicesTxt1> lv = new ArrayList<listInvoicesTxt1>();
       listInvoicesTxt1 listV1;
       List<invoices> invoicesLists = new ArrayList<invoices>( InvoicesRepository.findAllListsForTxt() );
-      /*String invoiceId = "0";
-      String orderId = "";
-	  String fullName = "";
-	  String phoneNumber = "";
-	  String email = "";
-	  String serviceName = "";
-	  String linkForPayment = "";
-	  String validityPeriod = "";
-	  String statusId = "";
-	  String createdAt = "";
-	  String updatedAt = "";*/
-	  for( invoices vList:invoicesLists ){
-		 listV1 = new listInvoicesTxt1();
+	   for( invoices vList:invoicesLists ){
+		   listV1 = new listInvoicesTxt1();
          listV1.setInvoiceId(vList.getInvoiceId());
          listV1.setOrderId(vList.getOrderId());
          listV1.setFullName(vList.getFullName());
@@ -49,9 +38,9 @@ public class mymethods {
          listV1.setCreatedAt(vList.getCreatedAt());
          listV1.setUpdatedAt(vList.getUpdatedAt());
          listV1.setCountGoods( Integer.toString(GoodsRepository.getCountGoodsInInvoice(vList.getInvoiceId())) );
-		 lv.add(listV1);
-		 //------------------------------ 
-	  }
+		   lv.add(listV1);
+		   //------------------------------ 
+	   }
       logger.info("выгружен список invoices\n");
 	  return lv;
    }
